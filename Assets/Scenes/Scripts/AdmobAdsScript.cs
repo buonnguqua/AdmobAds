@@ -45,31 +45,31 @@ public class AdmobAdsScript : MonoBehaviour
     #region Banner
     public void LoadBannerAd()
     {
-        //create a banner
-        CreateBannerView();
-        //listen to banner events
-        ListenToBannerEvents();
-        //load the banner
+        // create an instance of a banner view first.
         if (bannerView == null)
         {
             CreateBannerView();
         }
-
+        // create our request used to load the ad.
         var adRequest = new AdRequest();
-        adRequest.Keywords.Add("unity-admob-sample");
-
+        // send the request to load the ad.
         Debug.Log("Loading banner Ad !!");
-        //show the banner on the screen
         bannerView.LoadAd(adRequest);
     }
     void CreateBannerView()
     {
         Debug.Log("Creating banner view");
+        // If we already have a banner, destroy the old one.
         if (bannerView != null)
         {
             DestroyBannerAd();
         }
-        bannerView = new BannerView(bannerId, AdSize.Banner, AdPosition.Top);
+        // Create a 320x50 banner at top of the screen
+        bannerView = new BannerView(bannerId, AdSize.Banner, AdPosition.Bottom);
+        //listen to banner events
+        ListenToBannerEvents();
+
+        Debug.Log("Banner view created.");
     }
     void ListenToBannerEvents()
     {
@@ -110,7 +110,6 @@ public class AdmobAdsScript : MonoBehaviour
     }
     public void DestroyBannerAd()
     {
-        Debug.Log("Destroying banner view.");
         if (bannerView != null)
         {
             Debug.Log("Destroying banner view.");
@@ -205,7 +204,6 @@ public class AdmobAdsScript : MonoBehaviour
 
         // create our request used to load the ad.
         var adRequest = new AdRequest();
-        adRequest.Keywords.Add("unity-admob-sample");
 
         // send the request to load the ad.
         RewardedInterstitialAd.Load(rewardedInterId, adRequest, (RewardedInterstitialAd ad, LoadAdError error) =>
