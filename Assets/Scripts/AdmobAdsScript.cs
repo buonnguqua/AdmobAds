@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 public class AdmobAdsScript : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI totalCoinsTxt;
     //paste this test appID to Asset > Google Mobile Ads > Settings
     private string appIdAndroid = "ca-app-pub-3940256099942544~3347511713";
     private string appIdIOS = "ca-app-pub-3940256099942544~1458002511";
@@ -32,26 +31,13 @@ public class AdmobAdsScript : MonoBehaviour
     private RewardedInterstitialAd rewardedInterstitialAd;
     private NativeAd nativeAd;
 
-    internal static List<string> TestDeviceIds = new List<string>()
-        {
-            AdRequest.TestDeviceSimulator,
-#if UNITY_IPHONE
-            "96e23e80653bb28980d3f40beb58915c",
-#elif UNITY_ANDROID
-            "702815ACFC14FF222DA1DC767672A573"
-#endif
-        };
-
+    [SerializeField] private TextMeshProUGUI totalCoinsTxt;
     private void Start()
     {
         ShowCoins();
         // On Android, Unity is paused when displaying interstitial or rewarded video. This setting makes iOS behave consistently with Android.
         MobileAds.SetiOSAppPauseOnBackground(true);
         MobileAds.RaiseAdEventsOnUnityMainThread = true;
-        MobileAds.SetRequestConfiguration(new RequestConfiguration
-        {
-            TestDeviceIds = TestDeviceIds
-        });
 
         // Initialize the Google Mobile Ads Unity plugin.
         Debug.Log("Google Mobile Ads Initializing.");
@@ -413,9 +399,9 @@ public class AdmobAdsScript : MonoBehaviour
     #region extra 
     private void GrantCoins(int coins)
     {
-        int crrCoins = PlayerPrefs.GetInt("totalCoins");
-        crrCoins += coins;
-        PlayerPrefs.SetInt("totalCoins", crrCoins);
+        int currentCoins = PlayerPrefs.GetInt("totalCoins");
+        currentCoins += coins;
+        PlayerPrefs.SetInt("totalCoins", currentCoins);
         ShowCoins();
     }
     private void ShowCoins()
