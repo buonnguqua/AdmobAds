@@ -6,21 +6,22 @@ using System;
 
 public class AdmobAdsScript : MonoBehaviour
 {
-    public TextMeshProUGUI totalCoinsTxt;
-    public string appId = "ca-app-pub-3940256099942544~3347511713";
+    [SerializeField] private TextMeshProUGUI totalCoinsTxt;
+    //paste this test appID to Asset > Google Mobile Ads > Settings
+    private string appId = "ca-app-pub-3940256099942544~3347511713";
 
 #if UNITY_ANDROID
-   private string bannerId = "ca-app-pub-3940256099942544/6300978111";
-   private string interId = "ca-app-pub-3940256099942544/1033173712";
-   private string rewardedId = "ca-app-pub-3940256099942544/5224354917";
-   private string rewardedInterId = "ca -app-pub-3940256099942544/5354046379";
-   private string nativeId = "ca-app-pub-3940256099942544/2247696110";
+    private string bannerId = "ca-app-pub-3940256099942544/6300978111";
+    private string interId = "ca-app-pub-3940256099942544/1033173712";
+    private string rewardedId = "ca-app-pub-3940256099942544/5224354917";
+    private string rewardedInterId = "ca -app-pub-3940256099942544/5354046379";
+    private string nativeId = "ca-app-pub-3940256099942544/2247696110";
 #elif UNITY_IPHONE
-   private string bannerId = "ca-app-pub-3940256099942544/2934735716";
-   private string interId = "ca-app-pub-3940256099942544/4411468910";
-   private string rewardedId = "ca-app-pub-3940256099942544/1712485313";
-   private string rewardedInterId = "ca-app-pub-3940256099942544/6978759866";
-   private string nativeId = "ca-app-pub-3940256099942544/3986624511";
+    private string bannerId = "ca-app-pub-3940256099942544/2934735716";
+    private string interId = "ca-app-pub-3940256099942544/4411468910";
+    private string rewardedId = "ca-app-pub-3940256099942544/1712485313";
+    private string rewardedInterId = "ca-app-pub-3940256099942544/6978759866";
+    private string nativeId = "ca-app-pub-3940256099942544/3986624511";
 #endif
 
     private BannerView bannerView;
@@ -79,15 +80,12 @@ public class AdmobAdsScript : MonoBehaviour
         // Raised when an ad fails to load into the banner view.
         bannerView.OnBannerAdLoadFailed += (LoadAdError error) =>
         {
-            Debug.LogError("Banner view failed to load an ad with error : "
-                + error);
+            Debug.LogError("Banner view failed to load an ad with error : " + error);
         };
         // Raised when the ad is estimated to have earned money.
         bannerView.OnAdPaid += (AdValue adValue) =>
         {
-            Debug.Log("Banner view paid {0} {1}." +
-                adValue.Value +
-                adValue.CurrencyCode);
+            Debug.Log("Banner view paid {0} {1}." + adValue.Value + adValue.CurrencyCode);
         };
         // Raised when an impression is recorded for an ad.
         bannerView.OnAdImpressionRecorded += () =>
@@ -164,9 +162,7 @@ public class AdmobAdsScript : MonoBehaviour
         // Raised when the ad is estimated to have earned money.
         ad.OnAdPaid += (AdValue adValue) =>
         {
-            Debug.Log("Interstitial ad paid {0} {1}." +
-                adValue.Value +
-                adValue.CurrencyCode);
+            Debug.Log("Interstitial ad paid {0} {1}." + adValue.Value + adValue.CurrencyCode);
         };
         // Raised when an impression is recorded for an ad.
         ad.OnAdImpressionRecorded += () =>
@@ -191,8 +187,7 @@ public class AdmobAdsScript : MonoBehaviour
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
-            Debug.LogError("Interstitial ad failed to open full screen content " +
-                           "with error : " + error);
+            Debug.LogError("Interstitial ad failed to open full screen content with error : " + error);
         };
     }
     #endregion
@@ -218,8 +213,7 @@ public class AdmobAdsScript : MonoBehaviour
               // if error is not null, the load request failed.
               if (error != null || ad == null)
                 {
-                    Debug.LogError("rewarded interstitial ad failed to load an ad " +
-                                   "with error : " + error);
+                    Debug.LogError("rewarded interstitial ad failed to load an ad with error : " + error);
                     return;
                 }
                 Debug.Log("Rewarded interstitial ad loaded with response : " + ad.GetResponseInfo());
@@ -323,7 +317,6 @@ public class AdmobAdsScript : MonoBehaviour
     }
     public void ShowRewardedAd()
     {
-
         if (rewardedAd != null && rewardedAd.CanShowAd())
         {
             rewardedAd.Show((Reward reward) =>
@@ -367,8 +360,7 @@ public class AdmobAdsScript : MonoBehaviour
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
-            Debug.LogError("Rewarded ad failed to open full screen content " +
-                           "with error : " + error);
+            Debug.LogError("Rewarded ad failed to open full screen content with error : " + error);
         };
     }
     #endregion

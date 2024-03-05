@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 19620158}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: ShowInterstitialAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &19620158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 266627985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: LoadBannerAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &266627985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,7 +471,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 283920478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: ShowRewardedInterstitialAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &283920478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +951,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 467124151}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: ShowRewardedAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &467124151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,7 +1084,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 475572944}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: RequestNativeAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &475572944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,7 +1310,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 727764417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: LoadRewardedInterstitialAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &727764417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,7 +1418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Show Banner
+  m_text: 'Destroy Banner
 
 '
   m_isRightToLeft: 0
@@ -1438,7 +1510,7 @@ GameObject:
   - component: {fileID: 834316326}
   - component: {fileID: 834316325}
   m_Layer: 5
-  m_Name: ShowBanner
+  m_Name: DestroyBanner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1507,7 +1579,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 834316326}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: DestroyBannerAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &834316326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2239,7 +2323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoinsTxt: {fileID: 2121953318}
-  appId: ca-app-pub-3940256099942544~3347511713
   img: {fileID: 305748706}
 --- !u!4 &1433403023
 Transform:
@@ -2337,7 +2420,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1445823826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: LoadRewardedAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1445823826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2926,7 +3021,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1832069725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433403022}
+        m_TargetAssemblyTypeName: AdmobAdsScript, Assembly-CSharp
+        m_MethodName: LoadInterstitialAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1832069725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3024,6 +3131,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Load Native
 
+    only run on mobile
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3051,8 +3160,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
