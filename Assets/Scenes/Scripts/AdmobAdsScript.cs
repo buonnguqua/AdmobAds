@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using GoogleMobileAds.Api;
 using System;
+using System.Collections.Generic;
 
 public class AdmobAdsScript : MonoBehaviour
 {
@@ -31,15 +32,32 @@ public class AdmobAdsScript : MonoBehaviour
     private RewardedInterstitialAd rewardedInterstitialAd;
     private NativeAd nativeAd;
 
+    internal static List<string> TestDeviceIds = new List<string>()
+        {
+            AdRequest.TestDeviceSimulator,
+#if UNITY_IPHONE
+            "96e23e80653bb28980d3f40beb58915c",
+#elif UNITY_ANDROID
+            "702815ACFC14FF222DA1DC767672A573"
+#endif
+        };
+
     private void Start()
     {
         ShowCoins();
         // On Android, Unity is paused when displaying interstitial or rewarded video. This setting makes iOS behave consistently with Android.
         MobileAds.SetiOSAppPauseOnBackground(true);
         MobileAds.RaiseAdEventsOnUnityMainThread = true;
+        MobileAds.SetRequestConfiguration(new RequestConfiguration
+        {
+            TestDeviceIds = TestDeviceIds
+        });
+
+        // Initialize the Google Mobile Ads Unity plugin.
+        Debug.Log("Google Mobile Ads Initializing.");
         MobileAds.Initialize(initStatus => 
         {
-            Debug.Log("Ads Initialised !!");
+            Debug.Log("Google Mobile Ads initialization complete.");
         });
     }
     #region Banner
