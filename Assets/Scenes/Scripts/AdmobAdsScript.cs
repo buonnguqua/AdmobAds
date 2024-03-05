@@ -74,8 +74,7 @@ public class AdmobAdsScript : MonoBehaviour
     {
         bannerView.OnBannerAdLoaded += () =>
         {
-            Debug.Log("Banner view loaded an ad with response : "
-                + bannerView.GetResponseInfo());
+            Debug.Log("Banner view loaded an ad with response : " + bannerView.GetResponseInfo());
         };
         // Raised when an ad fails to load into the banner view.
         bannerView.OnBannerAdLoadFailed += (LoadAdError error) =>
@@ -232,6 +231,7 @@ public class AdmobAdsScript : MonoBehaviour
             rewardedInterstitialAd.Show((Reward reward) =>
             {
                 // TODO: Reward the user.
+                GrantCoins(100);
                 Debug.Log(String.Format(rewardMsg, reward.Type, reward.Amount));
             });
         }
@@ -321,6 +321,7 @@ public class AdmobAdsScript : MonoBehaviour
         {
             rewardedAd.Show((Reward reward) =>
             {
+                // TODO: Reward the user.
                 GrantCoins(100);
                 Debug.Log("Give reward to player !!");
             });
