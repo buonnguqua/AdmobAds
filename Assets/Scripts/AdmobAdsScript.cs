@@ -8,8 +8,10 @@ using System.Collections.Generic;
 public class AdmobAdsScript : MonoBehaviour
 {
     //paste this test appID to Asset > Google Mobile Ads > Settings
-    private string appIdAndroid = "ca-app-pub-3940256099942544~3347511713";
-    private string appIdIOS = "ca-app-pub-3940256099942544~1458002511";
+    //appId test for Android
+    //ca-app-pub-3940256099942544~3347511713;
+    //appId test for iOS
+    //ca-app-pub-3940256099942544~1458002511;
 
 #if UNITY_ANDROID
     private string bannerId = "ca-app-pub-3940256099942544/6300978111";
