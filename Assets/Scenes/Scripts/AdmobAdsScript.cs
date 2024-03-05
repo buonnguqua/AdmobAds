@@ -367,7 +367,7 @@ public class AdmobAdsScript : MonoBehaviour
 
 
     #region Native
-    public Image img;
+    [SerializeField] private Image img;
     public void RequestNativeAd()
     {
         AdLoader adLoader = new AdLoader.Builder(nativeId).ForNativeAd().Build();
