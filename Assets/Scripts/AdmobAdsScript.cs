@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 using GoogleMobileAds.Api;
 using System;
 using System.Collections.Generic;
-
 public class AdmobAdsScript : MonoBehaviour
 {
     //paste this test appID to Asset > Google Mobile Ads > Settings
@@ -411,4 +411,8 @@ public class AdmobAdsScript : MonoBehaviour
         totalCoinsTxt.text = PlayerPrefs.GetInt("totalCoins").ToString();
     }
     #endregion
+    public void LoadSceneGoogle()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
